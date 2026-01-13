@@ -6,7 +6,7 @@ h1 {
 }
 
 ul li {
-    font-family: macondo;
+    font-family: macondo, cursive; 
     color: black; 
     font-size: 15px;
     text-decoration: none;
