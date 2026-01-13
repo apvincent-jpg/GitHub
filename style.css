@@ -1,0 +1,222 @@
+/* mobile */
+h1 {
+    font-family: macondo;
+    color: black; 
+    font-size: 23px;
+}
+
+ul li {
+    font-family: macondo;
+    color: black; 
+    font-size: 15px;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: antiquewhite;
+    margin: 10px;
+    border-radius: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color:black; 
+}
+
+ul li a:hover {
+    color: white;
+}
+
+ul li:hover {
+    background-color: rgb(12, 56, 199);
+    transition: background-color 0.7s ease;
+}
+
+ul {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+footer {
+    font-family: macondo;
+    color: black;
+    background-color: antiquewhite;
+    margin: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px; 
+    padding-left: 10px; 
+    min-width: 200px;
+    border-radius: 10px;
+    line-height: 1.2px;
+    margin-bottom:0;
+}
+
+article {
+    background-color: rgb(225, 218, 191,0.6); 
+    border-style: solid;
+    border-color: rgb(225, 218, 191);
+    margin: 10px;
+    padding-top: 5px; 
+    padding-bottom: 10px; 
+    padding: 10px;
+    min-width: 200px;
+    max-width: 300px;
+    border-radius: 30px;
+    margin: 20px auto 10px;
+}
+
+h1 {
+    margin: auto; 
+}
+
+body {
+    /* background-color: rgb(3, 10, 134); */
+    background-color: rgb(251, 67, 34);
+}
+
+.stack header {
+    position: relative; 
+    height: 250px;
+    width: 100%;
+    text-align: center; 
+}
+
+.title {
+    display:none;
+    pointer-events: none;
+    }
+
+.titleswirl {
+    margin: 0 auto;
+    display: block; 
+    max-height: 250px;
+}
+
+#container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact a {
+    text-decoration: none;
+    color:black; 
+ }
+
+/* put all desktop code */
+@media only screen and (min-width: 600px) {
+main {
+    display: flex;  
+    max-width: 1200px;
+    align-items: flex-start;
+    /* margin: 10px auto; */
+    gap: 20px;
+}
+
+article {
+    margin: 0; 
+    flex: 1; 
+    max-width: 300px;
+    max-height: 300px;
+}
+
+main {
+    margin-bottom: 30px;
+    margin-top: 450px;
+    display: flex; 
+    max-width: 1200px; 
+    align-items: flex-start; 
+    margin-left: auto;
+    margin-right: auto; 
+    gap: 20px; 
+}
+
+.stack header {
+    height: 400px; 
+    position: relative; 
+    width: 100%; 
+    text-align: center;
+}
+
+.title-align {
+    position: relative; 
+    display: inline-block; 
+}
+
+.title {
+    visibility: visible;
+    display: block;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        max-height: 400px;
+        margin-bottom: 25px;
+        position: absolute; 
+        z-index: 2; 
+        margin-top: 0px;
+  
+      }
+
+.titleswirl {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    max-height: 400px;
+    transform: translateX(-50%);  
+    z-index: 1;  
+ 
+}
+
+.titleswirl:hover {
+    animation: spin 2s linear infinite; 
+}
+
+}
+
+/* floating clouds  */
+.floatclouds img {
+    position: absolute; 
+    /* top: 50px; */
+    left: -200px;
+    max-width: 200px; 
+    z-index:3; 
+}
+
+.cloud1 {
+    animation: float1 25s linear infinite; 
+    animation-delay: 7s;
+    top: 300px;
+}
+
+.cloud2 {
+    top: 100px;
+    animation: float2 24s linear infinite; 
+    animation-delay: 1s; 
+}
+
+/* keyframes for animations */
+@keyframes spin {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes float1 { 
+   0% {
+    left: -200px;
+   }
+   100% {
+    left: 120%; 
+   }
+}
+
+@keyframes float2 { 
+   0% {
+    left: -200px;
+   }
+   100% {
+    left: 120%; 
+   }
+}
