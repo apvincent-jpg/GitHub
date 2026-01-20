@@ -28,7 +28,11 @@ ul li a:hover {
 }
 
 ul li:hover {
+<<<<<<< HEAD
     background-color: #DE4028;
+=======
+    background-color: rgb(251, 67, 34);
+>>>>>>> ec7791b3035b08de9cb8317ae6dd622a8bc1c91b
     transition: background-color 0.7s ease;
 }
 
@@ -110,6 +114,11 @@ main {
     align-items: flex-start;
     /* margin: 10px auto; */
     gap: 20px;
+}
+
+h1 {
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 article {
