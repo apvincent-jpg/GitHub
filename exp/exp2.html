@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+
+    <style>
+        body {
+            margin: 30px; 
+            background-color: rgb(200, 198, 190); 
+            font-family: Arial, Helvetica, sans-serif; 
+            color: rgb(201, 96, 16); 
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Experiment 2</h1>
+
+    <h1 class="changeText">Here's an animal you'd find there!</h1>
+    
+    <img id="enviroImage" src="" alt="enviro images" width="300">
+
+    <script>
+    
+    var yourEnviro = prompt("Pick an environment to live in: Desert, Grassland, Ocean, Rainforest, Garden ", ""); 
+
+    if (yourEnviro) {
+        yourEnviro = yourEnviro.toLowerCase();
+    }
+
+    var img = document.querySelector('#enviroImage');
+
+   if ( yourEnviro === "desert") {
+        img.src = "images/exp2_camel.png";
+        } else if (yourEnviro === "grassland") {
+        img.src = "images/exp2_bull.png"
+        } else if (yourEnviro === "ocean") {
+        img.src = "images/exp2_turtle.png"
+        } else if (yourEnviro === "rainforest") {
+        img.src = "images/exp2_frog.png"
+     }else if (yourEnviro === "garden") {
+        img.src = "images/exp2_spider.png"
+     }else {
+        img.style.display = "none";
+        document.querySelector('.changeText').textContent = "you did not enter an allowed environment"; 
+    } 
+ 
+    </script>
+
+</body>
+</html>
