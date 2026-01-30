@@ -14,13 +14,17 @@ ul li {
     background-color: antiquewhite;
     margin: 10px;
     border-radius: 30px;
-    padding: 5px;
+    /* padding: 5px; */
     text-align: center;
+    padding: 7px 0;
 }
 
 ul li a {
     text-decoration: none;
     color:black; 
+    padding: 5px;
+    transition: background-color 0.7s ease;
+
 }
 
 ul li a:hover {
@@ -28,12 +32,11 @@ ul li a:hover {
 }
 
 ul li:hover {
-<<<<<<< HEAD
     background-color: #DE4028;
-=======
-    background-color: rgb(251, 67, 34);
->>>>>>> ec7791b3035b08de9cb8317ae6dd622a8bc1c91b
-    transition: background-color 0.7s ease;
+}
+
+ul li:hover a {
+    color: white;
 }
 
 ul {
