@@ -1,0 +1,203 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: rgba(20, 20, 199, 0.9);
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.frontpage {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+/* -----------------intro (h1 + title image) */
+#intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#intro h1 {
+    color: rgb(248, 246, 239); 
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#intro .title-img {
+    max-width: 1000px;
+}
+
+/* ---------------------questions form */
+form {
+    background-color: rgb(169, 8, 8); 
+    border: solid 3px rgb(153, 131, 7);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    color:rgb(248, 246, 239); 
+    font-size: 20px;;
+}
+
+.questions {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.questions .left-div,
+.questions .right-div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color: rgb(163, 9, 9);
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', serif
+}
+
+form button:hover {
+    background-color: blue;
+    transition: background-color 0.6s ease, transform 0.2s ease;
+    color: white;
+}
+
+/* ----------------changing screen */
+#madlib-overlay {
+    display: none;
+    position: fixed;
+    inset: 0; 
+    background-color: rgba(5, 21, 130, 0.5);
+    z-index: 10; 
+}
+
+/* -----------------frames */
+.frame-top,
+.frame-bottom {
+    flex-shrink: 0;
+    left: 0;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 11;
+}
+
+.frame-top {
+    height: 50%;
+    background-image: url('images/frame-top.png');
+}
+
+.frame-bottom {
+    height: 50%;
+    background-image: url('images/frame-bottom.png');
+    background-position: bottom center;
+}
+
+/* ---------overlay article */
+#madlib-overlay article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(226, 226, 211);
+    width: 60%;
+    max-width: 570px;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 12; /* above frames */
+}
+
+#madlib-overlay h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#madlib-overlay {
+    background-color: rgba(20, 20, 199);
+}
+
+#madlib-overlay p {
+    line-height: 23px;;
+    margin-bottom: 15px;
+}
+
+#madlib-overlay span {
+    font-weight: bold;
+    color: rgb(222, 196, 99);
+}
+
+/* -----------exit button */
+
+#exit {
+    display: inline-block; 
+    padding: 8px;
+    background-color: white;
+    color: blue;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+}
+
+#exit:hover {
+    background-color: rgb(222, 196, 99);
+    transition: background-color 0.6s ease, transform 0.2s ease;
+}
+
+@media (max-width: 600px) {
+    .questions {
+    flex-direction: column; 
+    gap: 20px; 
+    /* align-items: stretch;  */
+  }
+
+  form {
+    padding: 20px;
+    font-size: 18px; 
+    max-width: 300px;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
+
+
