@@ -1,0 +1,88 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(178, 198, 43); 
+    font-size: 50px;
+}
+ 
+body {
+	font-family: Arial;
+	color: #333;
+}
+
+main {
+	width: 30vw;
+	padding: 20px;
+}
+
+section {
+	height: 100vh;
+}
+
+p {
+    line-height: 20px;
+    max-width: 350px;
+    font-size: 16px;
+}
+
+h2 {
+    color:rgb(178, 198, 43); 
+    font-size: 30px;
+}
+
+figure {
+	display: block;
+	margin: 0;
+	width: 70vw;
+	height: 100vh;
+	position: fixed;
+	top:0;
+	right:0;
+	overflow: hidden;
+}
+
+figure img {
+	position: absolute;
+	transition: all 3s ease;
+}
+
+.sect1{
+	width: 147vh; 
+	top:0;
+	left: 50%;
+	transform:translateX(-50%);
+}
+
+.sect2,
+.sect3,
+.sect4,
+.sect5,
+.sect6{
+    width: 3768px;
+}
+
+.sect2 {
+    top: 0;
+    left: 0;
+}
+
+.sect3 {
+    top: 0;
+    left: calc(-3768px + 70vw);
+}
+
+.sect4 {
+	top: calc(-1500px + 100vh);
+    left: calc(-2200px + 70vw);
+}
+
+.sect5 {
+    top: calc(-2567px + 100vh);
+    left: calc(-3768px + 70vw);
+}
+
+.sect6 {
+    top: calc(-2300px + 100vh);
+    left: calc(-1600px + 70vw);
+}
+
+
