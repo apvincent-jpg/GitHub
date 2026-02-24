@@ -1,12 +1,12 @@
 /* mobile */
 h1 {
-    font-family: macondo;
+    font-family: Inconsolata; 
     color: black; 
     font-size: 23px;
 }
 
 ul li {
-    font-family: macondo; 
+    font-family: Inconsolata; 
     color: black; 
     font-size: 15px;
     text-decoration: none;
@@ -16,7 +16,6 @@ ul li {
     border-radius: 30px;
     /* padding: 5px; */
     text-align: center;
-    padding: 7px 0;
 }
 
 ul li a {
@@ -24,6 +23,9 @@ ul li a {
     color:black; 
     padding: 5px;
     transition: background-color 0.7s ease;
+    display: block; 
+    padding: 7px 0;
+    color: black; 
 
 }
 
@@ -45,7 +47,7 @@ ul {
 }
 
 footer {
-    font-family: macondo;
+    font-family: Inconsolata; 
     color: black;
     background-color: antiquewhite;
     margin: 0px;
