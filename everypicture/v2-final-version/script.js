@@ -71,14 +71,9 @@ window.addEventListener('load', function () {
     	original.style.opacity = 1;    // fully visible at the very top
 			}
 		
-
             prevCounter = counter;
         }
 	}); 
-
-	
-	
-	
 
 	
 }); 
