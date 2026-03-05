@@ -1,0 +1,110 @@
+h1 {
+    font-family: DM Sans; 
+    color: rgb(159, 177, 38);
+    font-size: 80px;
+}
+
+p {
+    font-family: DM Sans; 
+    line-height: 20px;
+    max-width: 350px;
+    font-size: 16px;
+}
+
+.topPara {
+    color:rgb(159, 177, 38);
+}
+
+h2 {
+    font-family: DM Sans; 
+    color: rgb(159, 177, 38);
+    font-size: 40px;
+    margin-bottom: -20px;
+    margin-left: 15px;
+}
+
+ 
+body {
+	font-family: DM Sans; 
+	color: #333;
+}
+
+main {
+	width: 30vw;
+	padding: 20px;
+    min-width: 200px;
+    /* background-color:rgb(159, 177, 38);  */
+    /* background-color: rgb(215, 212, 212); */
+    background-color: rgb(250, 248, 241);
+    
+}
+
+section {
+	height: 100vh;
+}
+
+figure {
+	display: block;
+	margin: 0;
+	width: 70vw;
+	height: 100vh;
+	position: fixed;
+	top:0;
+	right:0;
+	overflow: hidden;
+    background-color: white;
+}
+
+figure img {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+	transition: all 3s ease;
+    z-index: 1;
+}
+
+/* base image */
+
+.originalImg {
+    z-index: 1; 
+    opacity: 1; 
+    transition: opacity 0.5s ease;
+}
+
+/* overlay images */
+
+.overlay {
+    z-index: 2; 
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+.overlay.show {
+    opacity: 1.2;
+}
+
+.sect2,
+.sect3,
+.sect4,
+.sect5,
+.sect6{
+    width: 1200px;
+}
+
+.infoBox {
+    /* background-color: rgb(178, 198, 43);  */
+    max-width: 300px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 5px;
+    color: rgb(159, 177, 38);
+}
+
+footer {
+   margin: 10px;
+   text-align: center;
+   color: rgb(159, 177, 38);
+}
