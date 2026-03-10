@@ -1,0 +1,134 @@
+/* front overlay */
+
+/* switching on and off  */
+
+.frontOverlay {
+    display: block; 
+} 
+
+/* display none turns off game page */
+.gamePage {
+    display: none; 
+}
+
+header {
+    display: block; 
+    background-color: white;
+    margin: 20px;
+    border: solid rgb(11, 123, 58) 1px;
+    border-radius: 30px;
+    justify-content: center;
+    max-width: 975px;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    padding: 50px;
+    margin-top: 150px;
+}
+
+
+.frontBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: .8;
+} 
+.frontImages img {
+    max-height: 200px;
+}
+
+.frontImages {
+    display: flex; 
+    gap: 90px;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.gameImages {
+
+}
+
+
+/* type */
+
+ h1 {
+    font-family: Chelsea Market;
+    color: rgb(45, 45, 45);
+    font-size: 80px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-family: Chelsea Market;
+    color: green;
+    font-size: 20px;
+    display: block; 
+    border: solid black 2px; 
+    text-align: center;
+    justify-content: center;
+    max-width: 200px;
+} 
+
+/* game page  */
+
+.playerContainer {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    max-width: 975; 
+    margin: auto; 
+    padding: 0 50px;
+}
+.gameImages {
+    display: none; 
+}
+
+h3 {
+    font-family: Chelsea Market;
+    color: rgb(45, 45, 45);
+    font-size: 30px;
+    text-align: center;
+    
+}
+.score {
+    font-family: Chelsea Market;
+    color: rgb(45, 45, 45);
+    font-size: 30px;
+    text-align: center;
+}
+.playerOnePlate {
+    display: block; 
+    border-radius: 30px;
+    border: solid black 1px;
+    max-width: 200px;
+    padding: 20px;
+}
+
+.playerTwoPlate {
+    display: block; 
+    border-radius: 30px;
+    border: solid black 1px;
+    max-width: 200px;
+    padding: 20px;
+}
+
+.shootButton {
+    font-family: Chelsea Market;
+    background-color: rgb(243, 238, 231);
+    border-radius: 30px;
+    color: green;
+    font-size: 40px;
+    display: block; 
+    border: solid green 2px; 
+    text-align: center;
+    margin: auto;
+    max-width: 200px;
+}
+
+
