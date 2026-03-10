@@ -9,10 +9,13 @@
     z-index: 10;
 } 
 
+
 /* display none turns off game page */
 .gamePage {
     display: none; 
 }
+
+
 
 header {
     display: block; 
@@ -51,8 +54,9 @@ header {
     opacity: 0.9;
 }
 
-.gameImages {
-
+.gameImages img{
+    max-height: 300px;
+    z-index: 1;
 }
 
 
@@ -88,9 +92,12 @@ h2 {
     margin: auto; 
     padding: 0 50px;
 }
-.gameImages {
+/* .gameImages img{
     display: none; 
-}
+    max-height: 100px;
+} */
+
+/* rock, paper, s */
 
 h3 {
     font-family: Chelsea Market;
@@ -121,7 +128,7 @@ h3 {
     padding: 20px;
 }
 
-.shootButton {
+#shootButton {
     font-family: Chelsea Market;
     background-color: rgb(243, 238, 231);
     border-radius: 30px;

@@ -2,12 +2,15 @@
     console.log("reading js"); 
     "use strict"; 
 
-    const game = document.querySelector('.gameImages'); 
+    //VARIABLES
+    const gameImages = document.querySelector('.gameImages'); 
     const scoreDisplay = document.querySelectorAll('.score'); 
-    const shootButton = document.querySelector('.shootButton'); 
+    const shootButton = document.querySelector('#shootButton'); 
 
     const overlay = document.querySelector('.frontOverlay');
     const gamePage = document.querySelector(".gamePage"); 
+
+    let playerImgNum;
 
     const gameData = {
         object: ['game_rock.png', 'game_scissors.png', 'game_paper.png'],
@@ -19,64 +22,58 @@
         gameEnd: 5
     }; 
 
-    function startGame(choice){
-        gameData.playerChoice = choice; 
-        
+
+    //START GAME
+    function startGame(){
         overlay.style.display = "none";
         gamePage.style.display = "block";
-
-        playRound();
+        gameData.computerChoice = Math.floor(Math.random()*3); 
     }
+    
 
-    // when the player chooses
+    // OVERLAY CHOICE
+    //player choice 
     document.querySelector('#chooseRock').addEventListener('click', function(){
-        startGame(0); 
+       
+        playerImgNum = 0;
+         startGame(); 
     });
 
      document.querySelector('#choosePaper').addEventListener('click', function(){
-        startGame(1); 
+        
+         playerImgNum = 1;
+          startGame(); 
     });
 
      document.querySelector('#chooseScissors').addEventListener('click', function(){
-        startGame(2); 
+        
+         playerImgNum = 2;
+          startGame(); 
     });
 
 
-    function playerSelection(choice) {
-        gameData.playerChoice = choice;
-    }
-
-    // shoot button
-
+    // SHOOT BUTTON
     shootButton.addEventListener('click', function(){
-        playRound(); 
+        console.log('shoot pressed');
+       gameImages.innerHTML = `<img src = images/${gameData.object[playerImgNum]}> <img src = images/${gameData.object[gameData.computerChoice]}>`
     });
 
     function playRound() {
-        if(gameData.playerChoice === null){
-            alert('pick rock paper, or scissors first!');
-            return;
-        }
-
-        // computer pick, generate random array number
-        gameData.computerChoice = Math.floor(Math.random()*3); 
-
         // show images
         game.innerHTML = `
         <img src="images/${gameData.objects[gameData.playerChoice]}">
         <img src="images/${gameData.objects[gameData.computerChoice]}">`;
 
+        //what happens during round
         checkWinner(); 
         updateScore();
     }
 
-    // finding who wins
+    // UPDATING SCORE
 
-    function checkWinner(){
+    function updateScore(){
         const player = gameData.playerChoice; 
         const computer = gameData.computerChoice; 
-
-    //player wins 
 
     if (
         (player === 0 && computer === 2) || (player === 1 && computer === 0) || (player === 2 && computer === 1)
@@ -86,30 +83,22 @@
     else{
         gameData.score[1]++; 
     }
-
     }
 
-    //updating score 
-
-    function updateScore(){
-        scoreDisplay[0].textContent = gameData.score[0]; 
-        scoreDisplay[1].textContent = gameData.score[1]; 
-    }
-
+    //winner 
+    //player 1 - user
+    //player 2 - computer 
     function checkGameEnd(){
         if(gameData.score[0] === gameData.gameEnd){
             alert('You Win!'); 
-            location.reload(); 
+            // location.reload(); 
         }
         
         if(gameData.score[1] === gameData.gameEnd){
             alert('You Lost :(');
-            location.reload();
+            // location.reload();
         }
     }
-
-
-
 
 
     
