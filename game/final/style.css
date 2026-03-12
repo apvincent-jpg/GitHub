@@ -15,8 +15,6 @@
     display: none; 
 }
 
-
-
 header {
     display: block; 
     background-color: white;
@@ -24,7 +22,7 @@ header {
     border: solid rgb(11, 123, 58) 1px;
     border-radius: 30px;
     justify-content: center;
-    max-width: 975px;
+    max-width: 900px;
     margin: auto;
     z-index: 2;
     position: relative;
@@ -44,7 +42,13 @@ header {
     opacity: .8;
 } 
 .frontImages img {
-    max-height: 200px;
+    max-height: 225px;
+    transition: transform 0.2s ease; 
+}
+
+.frontImages img:hover {
+    transform: scale(1.15); 
+    cursor: pointer;
 }
 
 .frontImages {
@@ -54,9 +58,21 @@ header {
     opacity: 0.9;
 }
 
-.gameImages img{
-    max-height: 300px;
-    z-index: 1;
+#choosePaper {
+    margin-left: 0px;
+}
+
+.gameImages {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 120px;
+    margin-top: 40px;
+    position: relative; 
+}
+
+.gameImages img {
+    height: 180px; 
 }
 
 
@@ -65,7 +81,7 @@ header {
  h1 {
     font-family: Chelsea Market;
     color: rgb(45, 45, 45);
-    font-size: 80px;
+    font-size: 70px;
     text-align: center;
     padding-bottom: 20px;
 }
@@ -88,9 +104,10 @@ h2 {
     justify-content: space-between;
     align-items: center;
     height: 50vh;
-    max-width: 975; 
+    max-width: 975px; 
     margin: auto; 
     padding: 0 50px;
+    margin-top: 60px; 
 }
 /* .gameImages img{
     display: none; 
@@ -109,21 +126,21 @@ h3 {
 .score {
     font-family: Chelsea Market;
     color: rgb(45, 45, 45);
-    font-size: 30px;
+    font-size: 70px;
     text-align: center;
 }
 .playerOnePlate {
     display: block; 
-    border-radius: 30px;
-    border: solid black 1px;
+    /* border-radius: 30px; */
+    /* border: solid black 1px; */
     max-width: 200px;
     padding: 20px;
 }
 
 .playerTwoPlate {
     display: block; 
-    border-radius: 30px;
-    border: solid black 1px;
+    /* border-radius: 30px;
+    border: solid black 1px; */
     max-width: 200px;
     padding: 20px;
 }
@@ -131,14 +148,173 @@ h3 {
 #shootButton {
     font-family: Chelsea Market;
     background-color: rgb(243, 238, 231);
-    border-radius: 30px;
-    color: green;
-    font-size: 40px;
+    border-radius: 20px;
+    /* color: green; */
+    color: #83a63e; 
+    font-size: 60px;
     display: block; 
-    border: solid green 2px; 
+    border: solid #83a63e 2px; 
     text-align: center;
     margin: auto;
+    max-width: 300px;
+    padding: 10px;
+}
+
+#shootButton:hover {
+    background-color: #fce100; 
+    /* background-color: #ed1b78; */
+    transform: scale(1.10); 
+    transition: transform 0.2s ease; 
+}
+
+#nextRoundButton {
+    font-family: Chelsea Market;
+    background-color: rgb(243, 238, 231);
+    border-radius: 15px;
+    color: #83a63e; 
+    font-size: 20px;
+    display: block; 
+    border: solid #83a63e 2px; 
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 200px;
+    padding: 10px;
+}
+
+#nextRoundButton:hover {
+    background-color: #fce100; 
+    transform: scale(1.10); 
+    transition: transform 0.2s ease; 
+}
+
+.winOverlay {
+    display: none; 
+    background-color: white;
+    margin: 20px;
+    border: solid rgb(11, 123, 58) 1px;
+    border-radius: 30px;
+    justify-content: center;
+    max-width: 975px;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    padding: 50px;
+    margin-top: 150px;
+}
+
+#winMessage {
+    font-family: Chelsea Market;
+    color: green;
+    font-size: 40px;
+    display: block;  
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
     max-width: 200px;
 }
+
+#restartButton {
+    font-family: Chelsea Market;
+    background-color: rgb(243, 238, 231);
+    border-radius: 15px;
+    color: #83a63e; 
+    font-size: 20px;
+    display: block; 
+    border: solid #83a63e 2px; 
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 200px;
+    padding: 10px;
+}
+
+#restartButton:hover {
+    background-color: #fce100; 
+    transform: scale(1.10); 
+    transition: transform 0.2s ease; 
+}
+
+#fireNotice {
+    font-family: Chelsea Market;
+    font-size: 28px; 
+    text-align: center; 
+    color: darkorange; 
+    margin-top: 20px; 
+}
+
+/* //ANIMATION OBJECT MOVE*/
+
+.winner {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, 50%) scale(1); 
+    animation: moveToCenter 0.6s forwards;
+}
+
+/* LOSERS */
+
+.loserRight {
+    animation: pushRight 0.6s forwards;
+    /* animation-delay: 2s;  */
+}
+
+.loserLeft {
+    animation: pushLeft 0.6s forwards;
+    /* animation-delay: 2s;  */
+}
+
+/* WINNER MOVES TO CENTER */
+
+@keyframes moveToCenter {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    100% { transform: translate(-50%, -50%) scale(1.3); }
+}
+
+/* LOSER PUSHED RIGHT */
+
+@keyframes pushRight {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(900px); opacity: 0; }
+}
+
+/* LOSER PUSHED LEFT */
+
+@keyframes pushLeft {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(-900px); opacity: 0; }
+}
+
+/* // ANIMATION FIRE PULSE*/
+
+@keyframes firePulse {
+    0% {transform: scale(1); }
+    50% {transform: scale(1.3); }
+    100% {transform: scale(1); }
+
+}
+
+.fireball {
+        animation: firePulse 0.6s ease-in-out 4;
+}
+
+/* //ANIMATION  */
+
+@keyframes scorePulse {
+    0% {transform: scale(1); }
+    50% {transform: scale(1.6); }
+    100% {transform: scale(1); }
+}
+
+.scorePulse {
+    animation: scorePulse 0.6s ease-in-out; 
+}
+
+
+
+
+
+
 
 

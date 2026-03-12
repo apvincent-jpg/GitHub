@@ -14,6 +14,7 @@
 
 </head>
 <body>
+
     <main>
     <div class="frontOverlay">
     <img class="frontBackground" src="images/game_background.png" alt="background">
@@ -31,37 +32,52 @@
     </div>
 
     <div class="gamePage">
-        <h1>ROCK, PAPER, SCISSORS</h1>
+        <h1>ROCK, PAPER, SCISSORS </h1>
             <!-- see in th game of pig where they put the dice images that come up -->
-             <div class="gameImages">
-                <!-- <img class="rock" src="images/game_rock.png" alt="rock">
-                <img class="paper" src="images/game_paper.png" alt="paper">
-                <img class="scissors" src="images/game_scissors.png" alt="scissors"> -->
-            </div>
+          <div class="playerContainer"> 
 
-        <div class="playerContainer"> 
-        <div class="playerOnePlate">
-        <p class="score";> "score" </p>   
+    <div class="playerOnePlate">
+        <p class="score">0</p>   
         <h3>Player 1</h3>
-        </div>
+    </div>
 
-        <div class="playerTwoPlate">
-        <p class="score"> "score" </p>
+    <div class="gameImages"></div>
+
+    <div class="playerTwoPlate">
+        <p class="score">0</p>
         <h3>Player 2</h3>
-        </div>
-        </div>
+    </div>
+
+</div>
 
 
 
         <button id="shootButton">SHOOT!</button>
 
+        <!-- audios -->
+         <audio id="scissorsBeatsPaper" src="audios/game_scissors_audio.mp3"></audio>
+         <audio id="rockBeatsScissors" src="audios/game_rock_audio.mp3"></audio>
+         <audio id="paperBeatsRock" src="audios/game_paper_audio.mp3"></audio>
+         <audio id="fireSound" src="audios/game_fire_audio.mp3"></audio>
+         <audio id="buttonSound" src="audios/game_button_audio.mp3"></audio>
+
+        <button id="nextRoundButton">NEXT ROUND</button>
+
+        <p id="fireNotice"></p>
+
 
 
 
     </div>
+
+    <div class="winOverlay">
+        <p id="winMessage"></p>
+        <button id="restartButton">Play Again!</button>
+    </div>
+    
     </main>
 
-
+   
     
 </body>
 </html>
