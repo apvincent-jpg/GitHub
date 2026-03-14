@@ -9,6 +9,10 @@
     z-index: 10;
 } 
 
+body {
+    background-color: #f8f6f1;
+}
+
 
 /* display none turns off game page */
 .gamePage {
@@ -39,7 +43,7 @@ header {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    opacity: .8;
+    opacity: .5;
 } 
 .frontImages img {
     max-height: 225px;
@@ -86,17 +90,6 @@ header {
     padding-bottom: 20px;
 }
 
-h2 {
-    font-family: Chelsea Market;
-    color: green;
-    font-size: 20px;
-    display: block; 
-    border: solid black 2px; 
-    text-align: center;
-    justify-content: center;
-    max-width: 200px;
-} 
-
 /* game page  */
 
 .playerContainer {
@@ -116,7 +109,7 @@ h2 {
 
 /* rock, paper, s */
 
-h3 {
+h2 {
     font-family: Chelsea Market;
     color: rgb(45, 45, 45);
     font-size: 30px;
@@ -167,6 +160,15 @@ h3 {
     transition: transform 0.2s ease; 
 }
 
+.noHover:hover {
+    transform: none; 
+}
+
+.noHover {
+    transform: none;
+    pointer-events: none;
+}
+
 #nextRoundButton {
     font-family: Chelsea Market;
     background-color: rgb(243, 238, 231);
@@ -188,6 +190,85 @@ h3 {
     transition: transform 0.2s ease; 
 }
 
+.helpOverlay {
+    display: none; 
+
+    position: fixed; 
+    width: 500px;
+    height: 550px; 
+    top: 30px; 
+    left: 30vw; 
+
+    background-color: white;
+
+    z-index: 20; 
+
+    margin: 20px;
+    border: solid rgb(11, 123, 58) 1px;
+    border-radius: 30px;
+    margin-top: 150px;
+    padding: 30px; 
+}
+
+.helpOverlay p {
+    font-family: Chelsea Market;
+    color: rgb(45, 45, 45);
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.howToPlay p {
+    color: #83a63e; 
+    font-size: 30px;
+}
+
+body.darkBackground {
+    background-color: rgba(0,0,0,0.6);
+}
+
+.dimGame {
+    filter: brightness(0.35);
+}
+
+#restartButton {
+    font-family: Chelsea Market;
+    background-color: rgb(243, 238, 231);
+    border-radius: 15px;
+    color: #83a63e; 
+    font-size: 20px;
+    display: block; 
+    border: solid #83a63e 2px; 
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 200px;
+    padding: 10px;
+}
+
+#returnGame {
+    font-family: Chelsea Market;
+    background-color: rgb(243, 238, 231);
+    border-radius: 15px;
+    color: #83a63e; 
+    font-size: 20px;
+    display: block; 
+    border: solid #83a63e 2px; 
+    text-align: center;
+    margin: auto;
+    max-width: 200px;
+    padding: 10px; 
+    transition: transform 0.2s ease;
+    margin-bottom: 20px;
+}
+
+#returnGame:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    background-color: #fce100; 
+}
+
 .winOverlay {
     display: none; 
     background-color: white;
@@ -195,7 +276,7 @@ h3 {
     border: solid rgb(11, 123, 58) 1px;
     border-radius: 30px;
     justify-content: center;
-    max-width: 975px;
+    max-width: 500px;
     margin: auto;
     z-index: 2;
     position: relative;
@@ -212,6 +293,20 @@ h3 {
     margin: auto;
     margin-top: 20px;
     max-width: 200px;
+}
+
+.helpButton {
+    z-index: 10; 
+    top: -800px;
+    left: 5px; 
+    max-width: 50px; 
+    position: relative; 
+    transition: transform 0.2s ease;
+}
+
+.helpButton:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 #restartButton {

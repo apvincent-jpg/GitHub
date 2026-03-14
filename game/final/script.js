@@ -11,12 +11,15 @@
     const shootButton = document.querySelector('#shootButton'); 
     const nextRoundButton = document.querySelector('#nextRoundButton');
     const restartButton = document.querySelector('#restartButton'); 
+    const helpButton = document.querySelector('.helpButton');
+    const returnGame = document.querySelector("#returnGame")
 
     const overlay = document.querySelector('.frontOverlay');
     const gamePage = document.querySelector(".gamePage"); 
     const winOverlay = document.querySelector('.winOverlay');
     const winMessage = document.querySelector('#winMessage'); 
     const fireNotice = document.querySelector('#fireNotice'); 
+    const helpOverlay = document.querySelector('.helpOverlay');
 
     const rockAudio = document.getElementById('rockBeatsScissors'); 
     const paperAudio = document.getElementById('paperBeatsRock');
@@ -96,6 +99,8 @@
         return; 
        }
 
+       shootButton.classList.add('noHover'); 
+
        //normal round with no fireball
        gameData.playerChoice = playerImgNum; 
        gameData.computerChoice = Math.floor(Math.random() * 3); 
@@ -113,14 +118,34 @@
     
     });
 
+    // HELP BUTTON 
+
+    helpButton.addEventListener('click', function(){
+        helpOverlay.style.display = "block"; 
+        document.body.classList.add("darkBackground");
+        gamePage.classList.add("dimGame");
+        
+    })
+
+    returnGame.addEventListener('click', function(){
+        helpOverlay.style.display = "none";
+        document.body.classList.remove("darkBackground");
+        gamePage.classList.remove("dimGame");
+    });
+
     // NEXT ROUND BUTTON
     nextRoundButton.addEventListener('click', function(){
         fireNotice.innerHTML = "";
         gameImages.innerHTML = ""; 
 
+        shootButton.classList.remove('noHover'); 
+        shootButton.disabled = false;
+
         overlay.style.display = "block"; 
         gamePage.style.display = "none";
     })
+
+
 
 
     function playRound() {
